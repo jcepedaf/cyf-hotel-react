@@ -27,6 +27,11 @@
   font-size: large;
 }
 
+.panel-footer {
+  background-color: #0c0c0c;
+  color: #ffffff;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
