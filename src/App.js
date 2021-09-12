@@ -1,9 +1,6 @@
 import React from "react";
 import Heading from "./Heading";
-import TouristInfoCards from "./TouristInfoCards";
-import SearchResults from "./SearchResults";
 import TouristInfoCities from "./TouristInfoCities";
-
 import Bookings from "./components/Bookings";
 import "./App.css";
 import Footer from "./Footer";
@@ -22,7 +19,6 @@ const App = () => {
         <TouristInfoCities />
       </div>
       <Bookings />
-      <SearchResults />
       <Footer footer={footer} />
     </div>
   );
