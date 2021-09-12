@@ -1,5 +1,6 @@
 import React from "react";
 import SearchButton from "./components/SearchButton";
+import fakeBookings from "./data/fakeBookings.json";
 
 export function SearchResults() {
   return (
