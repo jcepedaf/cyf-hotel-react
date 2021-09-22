@@ -4,7 +4,7 @@ import moment from "moment";
 const SearchResults = ({ results }) => {
   return (
     <table className="table">
-      <thead class="thead-dark">
+      <thead className="thead-dark">
         <tr>
           <th scope="col">ID</th>
           <th scope="col">Title</th>
