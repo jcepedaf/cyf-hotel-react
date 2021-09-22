@@ -1,6 +1,5 @@
 import React from "react";
 import moment from "moment";
-import SearchButton from "./SearchButton";
 
 const SearchResults = ({ results }) => {
   return (

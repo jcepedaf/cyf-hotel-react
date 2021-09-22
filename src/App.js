@@ -4,6 +4,7 @@ import TouristInfoCities from "./TouristInfoCities";
 import Bookings from "./components/Bookings";
 import "./App.css";
 import Footer from "./Footer";
+import Restaurant from "./components/Restaurant";
 
 const footer = [
   "123 Fake Street, London, E1 4UD",
@@ -19,6 +20,10 @@ const App = () => {
         <TouristInfoCities />
       </div>
       <Bookings />
+      <div className="d-flex justify-content-center">
+        <Restaurant />
+      </div>
+
       <Footer footer={footer} />
     </div>
   );
