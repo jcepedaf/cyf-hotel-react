@@ -24,45 +24,49 @@ const SearchResults = ({ results }) => {
           </tr>
         </thead>
         <tbody>
-          {results.map(
-            (
-              {
-                id,
-                title,
-                firstName,
-                surname,
-                email,
-                roomId,
-                checkInDate,
-                checkOutDate
-              },
-              index
-            ) => {
-              const checkOut = moment(checkOutDate, "YYYY-MM-DD");
-              const checkIn = moment(checkInDate, "YYYY-MM-DD");
+          {!results.error ? (
+            results.map(
+              (
+                {
+                  id,
+                  title,
+                  firstName,
+                  surname,
+                  email,
+                  roomId,
+                  checkInDate,
+                  checkOutDate
+                },
+                index
+              ) => {
+                const checkOut = moment(checkOutDate, "YYYY-MM-DD");
+                const checkIn = moment(checkInDate, "YYYY-MM-DD");
 
-              return (
-                <tr key={index}>
-                  <th>{id}</th>
-                  <td>{title}</td>
-                  <td>{firstName}</td>
-                  <td>{surname}</td>
-                  <td>{email}</td>
-                  <td>{roomId}</td>
-                  <td>{checkInDate}</td>
-                  <td>{checkOutDate}</td>
-                  <td>{checkOut.diff(checkIn, "days")}</td>
-                  <td>
-                    <button
-                      className="btn btn-primary"
-                      onClick={() => setProfile(id)}
-                    >
-                      Show profile
-                    </button>
-                  </td>
-                </tr>
-              );
-            }
+                return (
+                  <tr key={index}>
+                    <th>{id}</th>
+                    <td>{title}</td>
+                    <td>{firstName}</td>
+                    <td>{surname}</td>
+                    <td>{email}</td>
+                    <td>{roomId}</td>
+                    <td>{checkInDate}</td>
+                    <td>{checkOutDate}</td>
+                    <td>{checkOut.diff(checkIn, "days")}</td>
+                    <td>
+                      <button
+                        className="btn btn-primary"
+                        onClick={() => setProfile(id)}
+                      >
+                        Show profile
+                      </button>
+                    </td>
+                  </tr>
+                );
+              }
+            )
+          ) : (
+            <h1>{results.error}</h1>
           )}
         </tbody>
       </table>
