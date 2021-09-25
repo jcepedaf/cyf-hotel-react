@@ -46,6 +46,17 @@
 
 tr {
   color: #5b5757;
+  background-color: rgba(136, 220, 231, 0.904);
+}
+
+.tr0 {
+  color: #5b5757;
+  background-color: rgba(136, 220, 231, 0.904);
+}
+
+.tr1 {
+  color: #5b5757;
+  background-color: rgba(232, 239, 240, 0.904);
 }
 
 .results {
